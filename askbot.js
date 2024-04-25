@@ -1,4 +1,5 @@
 const { OpenAI } = require('openai');
+const secondCheck = require('./secondcheck');
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 //function that calls my fine tuned model
@@ -13,4 +14,4 @@ async function AskBot(question,socket){
     secondCheck(response,socket,question);
 }
 
-module.exports(AskBot);
+module.exports = AskBot;
