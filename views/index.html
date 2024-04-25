@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk-To-Utshav</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Filters</h2>
+        <label class="filter" for="filter1"><input type="radio" name="filter" id="filter1" checked>Professional</label><br>
+        <label class="filter" for="filter2"><input type="radio" name="filter" id="filter2" disabled>Casual</label><br>
+        <label class="filter" for="filter3"><input type="radio" name="filter" id="filter3" disabled>[]</label><br><br>
+        <label class="filter">Utshav.AI is still in testing</label>
+    </div>
+    
+    <div class="chat">
+        <h1>Utshav.AI</h1>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="input-container">
+                <form id="message-form">
+                <input type="text" id="message-input" name="message" placeholder="Type your message...">
+                <input type="submit" value="Send">
+                </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
