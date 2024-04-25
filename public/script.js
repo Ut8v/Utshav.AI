@@ -22,9 +22,13 @@ socket.on('reply', function(reply){
 function addMessage(sender, message) {
     const messageDiv = document.createElement('div');
     messageDiv.textContent = `${sender}: ${message}`;
-    chatMessages.appendChild(messageDiv);
     messageDiv.style.margin = '2px';
-
+    messageDiv.style.padding = '5px';
+    messageDiv.style.borderRadius = '10px';
+    messageDiv.style.backgroundColor = sender === 'Utshav.AI' ? 'white' : 'green'; //if utshav ai white; else green
+    messageDiv.style.color = '#000'; 
+    chatMessages.appendChild(messageDiv);
 }
+
 
   

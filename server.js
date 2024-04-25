@@ -21,14 +21,14 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket)=>{
-    console.log('user connected');
+    //console.log('user connected');
     socket.emit('reply', 'Hello, This is Utshav.AI. How can I assist you?')
 
     socket.on('message', async(message)=>{
         console.log(message);
 
         try{
-            AskBot(message,socket);
+            AskBot(message,socket); //call the function to generate response from the fine tuned model
 
         }catch(err){
             
